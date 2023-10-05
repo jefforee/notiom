@@ -3,7 +3,7 @@ import * as React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'; 
 import theme from '../styles/theme'
-import IndexPage from '../pages/index';
+import IndexPage from './index';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
