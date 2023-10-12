@@ -1,25 +1,22 @@
-import NavBar from "../components/navbar";
-import { Box, Text, Button, Center } from '@chakra-ui/react';
-import Document from "..//components//document";
-
-const IndexPage = () => {
+import DocumentList from '@/components/DocumentList';
+import MainTitle from '@/components/MainTitle';
+import Navbar from '@/components/Navbar';
+import { VStack } from '@chakra-ui/react';
+export default function Page() {
+  const documents = [
+    'Document 1',
+    'Document 2',
+    'Document 3',
+    'bfdafasfdasfasfsa',
+    'fafdasfdasfasfasfdasjfklasf;asjkflas;fjkals;ffsaas',
+    'fdafasfasfsafsavcxads',
+    'fdasfasfasfdasf',
+  ];
   return (
-    <>
-        <NavBar />
-
-        <Center mt="8" fontWeight="bold" fontSize = "large" color="primary.gray">
-            Create. Explore.
-        </Center>
-        
-        <Center mt="4" fontWeight="medium" fontSize = "medium" color="primary.gray">
-            The document editing software you’ve been waiting for 
-        </Center>
-
-        <Center mt="8">
-            <Document />
-        </Center>
-    </>
+    <VStack m="10px" width="100%">
+      <Navbar />
+      <MainTitle />
+      <DocumentList documents={documents} />
+    </VStack>
   );
-};
-
-export default IndexPage;
+}

@@ -3,27 +3,43 @@ import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
   colors: {
-    primary: {
-      gray: '#545454', // Customize your primary color
+    gray: '#545454',
+  },
+  styles: {
+    global: {
+      // styles for the `body`
+      body: {
+        fontFamily: 'DM Sans, sans-serif',
+        fontWeight: 700,
+        color: 'gray',
+      },
     },
   },
-
-  fonts: {
-    body: 'DM Sans, sans-serif', // Customize your font
+  textStyles: {
+    h1: {
+      fontSize: '78px',
+      fontWeight: 700,
+      color: 'gray',
+    },
+    h2: {
+      fontSize: '52px',
+      fontWeight: 700,
+      color: 'gray',
+    },
+    body: {
+      fontSize: '20px',
+      fontWeight: 700,
+      color: 'gray',
+    },
   },
-
-  fontWeight: {
-    normal: 400,
-    medium: 500,
-    bold: 700, // Specify the font weight of 700
+  components: {
+    Button: {
+      baseStyle: {
+        borderRadius: '10px',
+        backgroundColor: '#2F80ED',
+      },
+    },
   },
-
-  fontSizes: {
-    small: '20px', // Custom font size
-    medium: '40px',
-    large: '60px',
-  },
-
 });
 
 export default theme;
