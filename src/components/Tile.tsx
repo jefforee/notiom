@@ -20,8 +20,7 @@ interface TileProps {
 
 const Tile: React.FC<TileProps> = ({ text }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [contents, setContents] = useState("");
-
+  const [contents, setContents] = useState(text);
   return (
     <>
       <button onClick={onOpen}>
@@ -53,14 +52,14 @@ const Tile: React.FC<TileProps> = ({ text }) => {
               value={contents}
               onChange={(e) => setContents(e.target.value)}
             />
-            <Text>Hi there!!</Text>
+            <Text></Text>
           </ModalBody>
 
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+            {/* <Button variant="ghost">Secondary Action</Button> */}
           </ModalFooter>
         </ModalContent>
       </Modal>
