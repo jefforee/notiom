@@ -2,6 +2,8 @@ import DocumentList from '@/components/DocumentList';
 import MainTitle from '@/components/MainTitle';
 import Navbar from '@/components/Navbar';
 import { VStack } from '@chakra-ui/react';
+
+
 export default function Page() {
   const documents = [
     'Document 1',
